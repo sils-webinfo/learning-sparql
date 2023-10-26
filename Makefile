@@ -4,8 +4,8 @@ SHELL := /usr/bin/env bash
 .DEFAULT_GOAL := install
 
 install: LearningSPARQLExamples.zip tools/jena/bin/arq
-	unzip $<
-	ln -s $(word 2,$^)
+	unzip -o $<
+	ln -s $(word 2,$^) ~/.local/bin/arq
 
 clean:
 	rm -f LearningSPARQLExamples.zip
