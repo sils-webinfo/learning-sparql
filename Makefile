@@ -5,6 +5,7 @@ SHELL := /usr/bin/env bash
 
 install: LearningSPARQLExamples.zip tools/jena/bin/arq
 	unzip $<
+	ln -s $(word 2,$^)
 
 clean:
 	rm -f LearningSPARQLExamples.zip
